@@ -31,3 +31,9 @@ Notes, files, etc. for a web Scraping/preservation/analysis Workshop at the Amer
 	- Introduction to *Programming Historian*
 	- Walkthrough a few other tools
 	- Discussion
+
+## For Me To Do
+- Zenodo walkthrough
+- Set up AWS machine for DocNow
+- Think of a good walkthrough for import.io - set up a few weeks beforehand to show people the longitudinal benefits
+- Host code on GitHub

@@ -41,7 +41,11 @@ cp example.env .env
 
 ## Step Three: Configure .env file 
 
-See the file in this directory. But for the lazy, paste in:
+See the file in this directory. But for the lazy, paste in the following. You'll have to make a few changes, however:
+- under SFM UI CONFIGURATION, you'll need to put the hostname of your instance. You can find that on the EC2 dashboard, or by running `curl http://169.254.169.254/latest/meta-data/public-hostname` on your command line. It will be something like `ec2-35-160-5-220.us-west-2.compute.amazonaws.com`.
+- make sure SFM_PORT is 80, and that it is open in your Security Group
+- for production, you will want to have an external volume to store data. Under `VOLUME CONFIGURATION`, you'll see `/src/sfm-data:/sfm-data`. Change the first volume to where you want it to be stored, for example `/mnt/vol1/sfm-data:/sfm-data` will store the data in your external mount.
+- finally, make sure to change the passwords and e-mails below to what you want to use.
 
 ```bash
 # For information on installation and configuration, see http://sfm.readthedocs.io/en/latest/install.html.

@@ -15,6 +15,21 @@ sudo service docker start
 sudo docker run hello-world
 ```
 
+We now need to install docker-compose as well.
+
+```bash
+sudo -i
+curl -L "https://github.com/docker/compose/releases/download/1.8.1/docker-compose-$(uname -s)-$(uname -m)" > /usr/local/bin/docker-compose
+chmod +x /usr/local/bin/docker-compose
+exit
+```
+
+And then doublecheck with:
+
+```bash
+docker-compose --version
+```
+
 ## Step Two: Get SFM Up and Running
 
 ```bash

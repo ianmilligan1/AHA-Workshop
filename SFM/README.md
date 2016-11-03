@@ -1,5 +1,5 @@
 # Setting up SFM
-Spin up AWS machine, Ubuntu 14.04.
+Spin up AWS machine, Ubuntu 14.04. Ensure HTTP port open 80.
 
 ## Step One: Install Docker
 
@@ -15,8 +15,24 @@ sudo service docker start
 sudo docker run hello-world
 ```
 
-## Step Two: Configure .env file 
+## Step Two: Get SFM Up and Running
+
+```bash
+git clone https://github.com/gwu-libraries/sfm-docker.git
+cd sfm-docker
+cp example.prod.docker-compose.yml docker-compose.yml
+cp example.env .env
+```
+
+## Step Three: Configure .env file 
 
 See the file in this directory.
 
-Then be patient. :)
+## Step Four: Profit?
+
+```bash
+docker-compose up -d
+docker-compose scale twitterrestharvester=2
+```
+
+Wait. Should be available on public DNS available via EC2 dashboard.

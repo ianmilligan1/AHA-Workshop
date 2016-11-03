@@ -34,6 +34,25 @@ http_basicauth_pass:
 
 You can get your Twitter key from setting up an application at <https://apps.twitter.com/>.
 
+I also found that we needed to add a line to the `VagrantFile` found in `dnflow-ansible`. I changed this block by adding the `provider.security_groups` setting.
+
+```
+### AWS provider
+  config.vm.provider :aws do |provider, override|
+    settings = load_settings 'aws'
+    provider.access_key_id = settings['access_key_id']
+    provider.secret_access_key = settings['secret_access_key']
+    provider.keypair_name = settings['keypair_name']
+    provider.security_groups = settings['security_group']
+    provider.ami = settings['ami']
+    provider.region = settings['region']
+    provider.monitoring = settings['monitoring']
+    override.vm.box = "https://github.com/mitchellh/vagrant-aws/raw/master/dummy.box"
+    override.ssh.username = settings["ssh_username"]
+    override.ssh.private_key_path = settings['private_key_path']
+  end
+```
+
 With this done, let's launch it.
 
 ```bash
@@ -47,10 +66,10 @@ cp provider/example.aws.yml provider/aws.yml
 ```
 
 Edit aws.yml with some AWS credentials. Mine looks like this. A few quick notes:
-- the access_key_id and secret_access_key come from your Security settings on AWS. 
-- the keypair_name is the name of the .pem file you use to SSH into the instance.
-- the ami is found on the EC2 dashboard. I like to keep everything in the same AWS region.
-- security_group is found on the EC2 dashboard. Note my unoriginal name, so you might be better off giving it a name like 'docnow'
+- the `access_key_id` and `secret_access_key` come from your Security settings on AWS. 
+- the `keypair_name` is the name of the .pem file you use to SSH into the instance.
+- the `ami` is found on the EC2 dashboard. I like to keep everything in the same AWS region.
+- `security_group` is found on the EC2 dashboard. Note my unoriginal name, so you might be better off giving it a name like 'docnow'
 - path to the private_key that is now found on this machine. I `scp`ed it over. 
 
 ```

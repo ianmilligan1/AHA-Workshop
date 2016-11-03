@@ -1,4 +1,5 @@
-# Setting up SFM
+# Setting up SFM on AWS
+
 Spin up AWS/Compute Canada/etc. machine, Ubuntu 14.04. Ensure HTTP port open 80 in security group (ingress) in addition to regular SSH.
 
 ## Step One: Install Docker

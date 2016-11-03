@@ -1,6 +1,6 @@
 # Setting up SFM on AWS
 
-Spin up AWS/Compute Canada/etc. machine, Ubuntu 14.04. Ensure HTTP port open 80 in security group (ingress) in addition to regular SSH.
+Spin up AWS/Compute Canada/etc. machine, Ubuntu 14.04. Ensure HTTP port open 80 in security group (ingress) in addition to regular SSH. I have tested on m3.medium, and m4.large. I recommend the latter (as does the SFM team when doing tests). For real production an even beefier machine is needed. Due to size of web data, they also recommend provisioning at least 150GB in EBS for testing purposes.
 
 ## Step One: Install Docker
 

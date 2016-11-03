@@ -163,7 +163,7 @@ LOAD_FIXTURES=True
 FIVE_MINUTE_SCHEDULE=True
 ```
 
-## Step Four: Profit?
+## Step Four: Deploy
 
 Add user credentials:
 
@@ -183,3 +183,9 @@ docker-compose scale twitterrestharvester=2
 This will take some time. Go have a coffee. :)
 
 Wait. Should be available on public DNS available via EC2 dashboard.
+
+## Step Five: Save Money
+
+We don't want to have the large AWS instance sittingly idly by when not doing anything. So since it is all stored on an EBS volume, we can safely stop it (this way, we only pay for the EBS value - $10/month for 100GB, rather than the roughly $700/month it would cost for a beefy AWS instance to run.
+
+When resuming, will have to manually update the `.env` file to reflect the newly-assigned Amazon Public DNS. Change that in `.env` and run `docker-compose up -d`.

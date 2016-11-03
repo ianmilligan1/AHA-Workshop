@@ -1,5 +1,5 @@
 # Setting up SFM
-Spin up AWS machine, Ubuntu 14.04. Ensure HTTP port open 80.
+Spin up AWS/Compute Canada/etc. machine, Ubuntu 14.04. Ensure HTTP port open 80 in security group (ingress) in addition to regular SSH.
 
 ## Step One: Install Docker
 
@@ -160,9 +160,21 @@ FIVE_MINUTE_SCHEDULE=True
 
 ## Step Four: Profit?
 
+Add user credentials:
+
+```bash
+sudo groupadd docker
+sudo gpasswd -a ${USER} docker
+sudo service docker restart
+```
+
+Alternatively, can run `docker-compose` commands below as `sudo`.
+
 ```bash
 docker-compose up -d
 docker-compose scale twitterrestharvester=2
 ```
+
+This will take some time. Go have a coffee. :)
 
 Wait. Should be available on public DNS available via EC2 dashboard.

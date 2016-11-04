@@ -151,3 +151,9 @@ sudo start docnow
 ```
 
 After waiting, the URL should be available on the IP address you've added the two files above.
+
+## Step Four: Saving AWS Money
+
+Even on an m3.medium, server will suck down money slowly (the fun of AWS). Luckily, the vagrant instance comes with an EBS storage volume.
+
+So when you don't want to use the server, you can stop it on the EC2 dashboard. When you resume, you will have to make sure to change the IP address in `/home/docnow/dnflow/dnflow.cfg` and `/etc/nginx/sites-enabled/docnow`. Stop and start the service again, and DocNow should be running on the new IP. 

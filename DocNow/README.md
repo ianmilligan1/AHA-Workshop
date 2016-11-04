@@ -69,7 +69,7 @@ Edit aws.yml with some AWS credentials. Mine looks like this. A few quick notes:
 - the `access_key_id` and `secret_access_key` come from your Security settings on AWS. 
 - the `keypair_name` is the name of the .pem file you use to SSH into the instance.
 - the `ami` is found on the EC2 dashboard. I like to keep everything in the same AWS region.
-- `security_group` is found on the EC2 dashboard. Note my unoriginal name, so you might be better off giving it a name like 'docnow'
+- `security_group` is found on the EC2 dashboard. Note my unoriginal name, so you might be better off giving it a name like 'docnow'. Note that I added this line to the existing file.
 - path to the private_key that is now found on this machine. I `scp`ed it over. 
 
 ```

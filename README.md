@@ -6,6 +6,11 @@ Notes, files, etc. for a web Scraping/preservation/analysis Workshop at the Amer
 
 ## Preliminary Schedule
 - **Introduction**
+- **Major Source Repositories**
+	- [Google Books Advanced Search](https://books.google.com/advanced_book_search)
+	- [Internet Archive Adavanced Search](http://archive.org/advancedsearch.php)
+	- [HathiTrust](https://www.hathitrust.org/)
+	- Limitations - what is and what is not online?
 - **Finding Sources Online**
 	- The Best Case Scenario (big red download button)
 	- The Second-Best Case Scenario (an API)
@@ -15,15 +20,18 @@ Notes, files, etc. for a web Scraping/preservation/analysis Workshop at the Amer
 	- Ethical considerations
 	- Technical considerations
 	- Brief tools roundtable (we won't use Command Line Tools in the class, as I think that's too difficult in a workshop - but will show their existence)
-		- OutWit Hub click through
+		- [OutWit Hub click through](https://github.com/ianmilligan1/AHA-Workshop/blob/master/Outwit.md)
 	- import.io walkthrough
 	- webrecorder.io walkthrough
+	- more advanced institutional options (i.e. Archive-It)
 	- Discussion
 - **Social Media Scraping**
 	- Ethical considerations
 	- Brief tools roundtable (i.e. twarc)
 	- Grabbing twitter.com vs the API (introduction to APIs)
 	- Documenting the Now walkthrough
+		- time to explore using AWS instance
+	- Social Feed Manager walkthrough
 	- Discussion
 - **Preservation**
 	- Where to store research data?
@@ -44,6 +52,5 @@ Notes, files, etc. for a web Scraping/preservation/analysis Workshop at the Amer
 
 ## For Me To Do
 - Zenodo walkthrough CHECK
-- Set up AWS machine for DocNow TO DO IN NOVEMBER
 - Think of a good walkthrough for import.io - set up a few weeks beforehand to show people the longitudinal benefits
 - Host code on GitHub

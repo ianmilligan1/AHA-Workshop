@@ -21,9 +21,9 @@ More importantly, for us, you can quickly turn this data into a CSV file that yo
 ## Case Study One: The Song Lyrics
 Let's take a look at the song lyric website again: <http://www.top40db.net/Find/Songs.asp?By=Year&ID=1970>
 
-Let's try changing the URL, so we see the songs from 1971: <http://www.top40db.net/Find/Songs.asp?By=Year&ID=1970>
+Let's try changing the URL, so we see the songs from 1971: <http://www.top40db.net/Find/Songs.asp?By=Year&ID=1971>
 
-And then from 1972: <http://www.top40db.net/Find/Songs.asp?By=Year&ID=1970>
+And then from 1972: <http://www.top40db.net/Find/Songs.asp?By=Year&ID=1972>
 
 Let's experiment to find the earliest (turns out to be 1955 by trial and error): <http://www.top40db.net/Find/Songs.asp?By=Year&ID=1955>
 
@@ -42,17 +42,18 @@ The first starting point should be
 4. Paste in <http://www.top40db.net/Find/Songs.asp?By=Year&ID=1970>
 5. Note that it begins processing the page in the background
 6. Once the table appears, note that it actually read the material properly - take a quick look around!
-7. Some of the columns aren't that useful - let's delete Imgtag image column and the Song Artist one, and rename the columsn to "Title" and "Artist"
+7. Some of the columns aren't that useful - let's delete Imgtag image column and the Song Artist one, and rename the columns to "Title" and "Artist"
 8. Let's actually say we are done
 
 We now have it set up for one page - if we were to click "Run URLs" we would get the data from 1970. But we want it for 1955 to 2014. How do we do that?
 
 1. Click on "Show URL Generator"
-2. Highlight "1970" - remember that's our X variabel
+2. Highlight "1970" - remember that's our X variable
 3. And then set up a range of numbers from 1955 to 2014, with a step of 1
-4. Click "add to list"
-5. Click "save"
-6. Click "Run URLs" - this will cost 60 of our free 500 credits per month
+4. Click "Remove all URLs"
+5. Click "add to list"
+6. Click "save"
+7. Click "Run URLs" - this will cost 60 of our free 500 credits per month
 
 It will take about two or three minutes. You should have a dataset of 23,168 songs. Click the "eye" to get a hint of what it looks like, and then download the CSV.
 
